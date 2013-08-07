@@ -26,7 +26,7 @@ my %module_build_args = (
     "Dist::Zilla::Plugin::Prereqs::MatchInstalled" => "v0.1.1",
     "Moose" => "2.1005",
     "MooseX::Types::Moose" => "0.36",
-    "perl" => "5.018000",
+    "perl" => "v5.10.0",
     "strict" => 0,
     "warnings" => 0
   },
@@ -34,7 +34,7 @@ my %module_build_args = (
   "test_requires" => {
     "Capture::Tiny" => "0.22",
     "Test::More" => "0.98",
-    "blib" => "1.06"
+    "blib" => 0
   }
 );
 

@@ -6,7 +6,7 @@ build_requires:
   Capture::Tiny: 0.22
   Module::Build: 0.4007
   Test::More: 0.98
-  blib: 1.06
+  blib: 0
 configure_requires:
   Module::Build: 0.4007
 dynamic_config: 0
@@ -24,7 +24,7 @@ requires:
   Dist::Zilla::Plugin::Prereqs::MatchInstalled: v0.1.1
   Moose: 2.1005
   MooseX::Types::Moose: 0.36
-  perl: 5.018000
+  perl: v5.10.0
   strict: 0
   warnings: 0
 version: 0.1.0
