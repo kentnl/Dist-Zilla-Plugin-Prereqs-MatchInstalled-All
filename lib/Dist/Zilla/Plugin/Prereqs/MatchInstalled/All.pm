@@ -125,9 +125,9 @@ For instance:
 
 =head3 Local Versions
 
-If you have a single dependency on your system you might use, which is locally patched, and locally patched in such a way the local version is more recent than any on CPAN, you should either 
+If you have a single dependency on your system you might use, which is locally patched, and locally patched in such a way the local version is more recent than any on CPAN, you should either
 
-=over 4 
+=over 4
 
 =item a. Not use this module
 
@@ -143,13 +143,13 @@ For instance, if you use C<Autoprereqs>, its very likely your distribution will 
 
 This module will ask your user to upgrade those versions to thier latest versions, which will likely require them to upgrade their Perl installation to do so.
 
-Which basically means for the mean time, either 
+Which basically means for the mean time, either
 
 =over 4
 
 =item a. You must be ok with end users needing more recent Perls
 
-=item b. You should avoid upgrading those dependencies by either 
+=item b. You should avoid upgrading those dependencies by either
 
 =over 4
 
