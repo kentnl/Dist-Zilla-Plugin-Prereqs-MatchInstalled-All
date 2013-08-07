@@ -13,9 +13,28 @@ BEGIN {
 
 use Moose;
 use Dist::Zilla::Plugin::Prereqs::MatchInstalled v0.1.1;
-use MooseX::Types::Moose qw( ArrayRef Str Bool );
+use MooseX::Types::Moose qw( ArrayRef HashRef Str Bool );
 
 extends 'Dist::Zilla::Plugin::Prereqs::MatchInstalled';
+
+has exclude => (
+    is => ro =>,
+    isa => ArrayRef[ Str ],
+    lazy => 1, 
+    default => sub { [] }
+);
+has _exclude_hash => (
+    is => ro =>,
+    isa => HashRef[ Str ],
+    lazy => 1,
+    builder => '_build__exclude_hash',
+);
+
+
+around mvp_multivalue_args => sub {
+    my ( $orig, $self, @args ) = @_;
+    return ( 'exclude' , $orig->($self, @args) );
+};
 
 has upgrade_perl => ( 
     is => ro =>,
@@ -24,10 +43,23 @@ has upgrade_perl => (
     default => sub { undef }
 );
 
+sub _build__exclude_hash {
+   my ( $self ) = @_;
+   return { map { ( $_ , 1 ) } @{ $self->exclude } };
+}
+
+sub _user_wants_excluded {
+    my ( $self, $module ) = @_;
+    return exists $self->_exclude_hash->{ $module };
+}
+
 sub _user_wants_upgrade_on {
     my ( $self, $module ) = @_;
     if ( $module eq 'perl' and not $self->upgrade_perl ) {
-        $self->log(q[perl is a dependency, but we won't automatically upgrade that without upgrade_perl = 1]);
+        $self->log_debug(q[perl is a dependency, but we won't automatically upgrade that without upgrade_perl = 1]);
+        return;
+    }
+    if ( $self->_user_wants_excluded( $module ) ) { 
         return;
     }
     return 1;
