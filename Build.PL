@@ -26,9 +26,9 @@ my %module_build_args = (
     "Dist::Zilla::Plugin::Prereqs::MatchInstalled" => "v0.1.1",
     "Moose" => "2.1005",
     "MooseX::Types::Moose" => "0.36",
-    "perl" => "v5.10.0",
-    "strict" => "1.07",
-    "warnings" => "1.18"
+    "perl" => "5.018000",
+    "strict" => 0,
+    "warnings" => 0
   },
   "script_files" => [],
   "test_requires" => {
