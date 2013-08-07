@@ -348,7 +348,7 @@ x_Dist_Zilla:
             - suggests
           modules: []
       name: Prereqs::MatchInstalled::All
-      version: ~
+      version: 0.1.0
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'
