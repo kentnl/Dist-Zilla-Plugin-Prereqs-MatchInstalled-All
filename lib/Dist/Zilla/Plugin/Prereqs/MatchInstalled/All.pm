@@ -44,7 +44,7 @@ For instance:
 
 =head3 Local Versions
 
-If you have a single dependency on your system you might use, which is locally patched, and locally patched in such a way the local version is more recent than any on CPAN, you should either
+If you have a single dependency on your system you might use, which is locally patched, and locally patched in such a way the local version is more recent than any on C<CPAN>, you should either
 
 =over 4
 
@@ -56,17 +56,17 @@ If you have a single dependency on your system you might use, which is locally p
 
 =head3 Non-Dual Life modules
 
-This plugin is not very smart, and can't differentiate between modules that do exist on CPAN independent of perl, and modules that don't.
+This plugin is not very smart, and can't differentiate between modules that do exist on C<CPAN> independent of Perl, and modules that don't.
 
 For instance, if you use C<Autoprereqs>, its very likely your distribution will add a dependency on either C<strict> or C<warnings>
 
-This module will ask your user to upgrade those versions to thier latest versions, which will likely require them to upgrade their Perl installation to do so.
+This module will ask your user to upgrade those versions to their latest versions, which will likely require them to upgrade their Perl installation to do so.
 
 Which basically means for the mean time, either
 
 =over 4
 
-=item a. You must be ok with end users needing more recent Perls
+=item a. You must be o.k. with end users needing more recent Perls
 
 =item b. You should avoid upgrading those dependencies by either
 
@@ -87,7 +87,7 @@ extends 'Dist::Zilla::Plugin::Prereqs::MatchInstalled';
 =attr C<exclude>
 
 This parameter can be specified multiple times, and each
-time should reprensent a single package string to exclude from
+time should represent a single package string to exclude from
 version upgrades.
 
     [Prereqs::MatchInstalled::All]
@@ -100,7 +100,7 @@ has exclude => (
   is => ro =>,
   isa => ArrayRef [Str],
   lazy    => 1,
-  default => sub { [] }
+  default => sub { [] },
 );
 
 =p_attr C<_exclude_hash>
@@ -121,7 +121,7 @@ If specified, this will permit upgrades on the dependency on C<perl> to the inst
     [Prereqs::MatchInstalled::All]
     upgrade_perl = 1
 
-Note, this has no effect on the modules that may inherently be only available by upgrading perl.
+Note, this has no effect on the modules that may inherently be only available by upgrading Perl.
 
 Default is false.
 
@@ -133,7 +133,7 @@ has upgrade_perl => (
   is      => ro  =>,
   isa     => Bool,
   lazy    => 1,
-  default => sub { undef }
+  default => sub { undef },
 );
 
 around mvp_multivalue_args => sub {
