@@ -463,6 +463,14 @@
                      "suggests"
                   ],
                   "modules" : []
+               },
+               "Dist::Zilla::Plugin::Prereqs::MatchInstalled::All" : {
+                  "exclude" : [
+                     "strict",
+                     "warnings",
+                     "blib"
+                  ],
+                  "upgrade_perl" : null
                }
             },
             "name" : "Prereqs::MatchInstalled::All",

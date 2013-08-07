@@ -347,6 +347,12 @@ x_Dist_Zilla:
             - recommends
             - suggests
           modules: []
+        Dist::Zilla::Plugin::Prereqs::MatchInstalled::All:
+          exclude:
+            - strict
+            - warnings
+            - blib
+          upgrade_perl: ~
       name: Prereqs::MatchInstalled::All
       version: 0.1.0
     -
