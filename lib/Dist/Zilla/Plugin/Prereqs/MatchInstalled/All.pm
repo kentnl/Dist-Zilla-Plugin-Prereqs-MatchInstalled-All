@@ -36,6 +36,17 @@ around mvp_multivalue_args => sub {
     return ( 'exclude' , $orig->($self, @args) );
 };
 
+around dump_config => sub {
+    my ( $orig, $self, @args ) = @_;
+    my $config = $self->$orig();
+    my $this_config  = { 
+        exclude => $self->exclude,
+        upgrade_perl => $self->upgrade_perl,
+    };
+    $config->{ q{} . __PACKAGE__ } = $this_config;
+    return $config;
+};
+
 has upgrade_perl => ( 
     is => ro =>,
     isa => Bool,
