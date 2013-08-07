@@ -53,6 +53,33 @@ DESCRIPTION
 
 ATTRIBUTES
   "exclude"
+    This parameter can be specified multiple times, and each time should
+    reprensent a single package string to exclude from version upgrades.
+
+        [Prereqs::MatchInstalled::All]
+        exclude = foo
+        exclude = bar
+
+  "upgrade_perl"
+    If specified, this will permit upgrades on the dependency on "perl" to
+    the installed version.
+
+        [Prereqs::MatchInstalled::All]
+        upgrade_perl = 1
+
+    Note, this has no effect on the modules that may inherently be only
+    available by upgrading perl.
+
+    Default is false.
+
+    See "PITFALLS" for details.
+
+PRIVATE ATTRIBUTES
+  "_exclude_hash"
+PRIVATE METHODS
+  "_build__exclude_hash"
+  "_user_wants_excluded"
+  "_user_wants_upgrade_on"
 AUTHOR
     Kent Fredric <kentfredric@gmail.com>
 

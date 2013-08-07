@@ -27,12 +27,16 @@ has exclude => (
   lazy    => 1,
   default => sub { [] }
 );
+
+
 has _exclude_hash => (
   is => ro =>,
   isa => HashRef [Str],
   lazy    => 1,
   builder => '_build__exclude_hash',
 );
+
+
 has upgrade_perl => (
   is      => ro  =>,
   isa     => Bool,
@@ -56,15 +60,18 @@ around dump_config => sub {
   return $config;
 };
 
+
 sub _build__exclude_hash {
   my ($self) = @_;
   return { map { ( $_, 1 ) } @{ $self->exclude } };
 }
 
+
 sub _user_wants_excluded {
   my ( $self, $module ) = @_;
   return exists $self->_exclude_hash->{$module};
 }
+
 
 sub _user_wants_upgrade_on {
   my ( $self, $module ) = @_;
@@ -157,6 +164,39 @@ Which basically means for the mean time, either
 =head1 ATTRIBUTES
 
 =head2 C<exclude>
+
+This parameter can be specified multiple times, and each
+time should reprensent a single package string to exclude from
+version upgrades.
+
+    [Prereqs::MatchInstalled::All]
+    exclude = foo
+    exclude = bar
+
+=head2 C<upgrade_perl>
+
+If specified, this will permit upgrades on the dependency on C<perl> to the installed version.
+
+    [Prereqs::MatchInstalled::All]
+    upgrade_perl = 1
+
+Note, this has no effect on the modules that may inherently be only available by upgrading perl.
+
+Default is false.
+
+See L</PITFALLS> for details.
+
+=head1 PRIVATE ATTRIBUTES
+
+=head2 C<_exclude_hash>
+
+=head1 PRIVATE METHODS
+
+=head2 C<_build__exclude_hash>
+
+=head2 C<_user_wants_excluded>
+
+=head2 C<_user_wants_upgrade_on>
 
 =begin MetaPOD::JSON v1.1.0
 
