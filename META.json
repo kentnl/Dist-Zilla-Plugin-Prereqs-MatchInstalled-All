@@ -54,8 +54,8 @@
       },
       "test" : {
          "requires" : {
-            "IO::Handle" : "1.34",
-            "IPC::Open3" : "1.13",
+            "IO::Handle" : "0",
+            "IPC::Open3" : "0",
             "Test::More" : "0.98"
          }
       }
@@ -492,7 +492,9 @@
                   "exclude" : [
                      "strict",
                      "warnings",
-                     "blib"
+                     "blib",
+                     "IO::Handle",
+                     "IPC::Open3"
                   ],
                   "upgrade_perl" : null
                }

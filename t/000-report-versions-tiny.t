@@ -51,8 +51,8 @@ sub pmver {
 eval { $v .= pmver('Dist::Zilla::Plugin::Prereqs::MatchInstalled','v0.1.1') };
 eval { $v .= pmver('Dist::Zilla::PluginBundle::Author::KENTNL','v1.8.3') };
 eval { $v .= pmver('Dist::Zilla::PluginBundle::Author::KENTNL::Lite','v1.3.0') };
-eval { $v .= pmver('IO::Handle','1.34') };
-eval { $v .= pmver('IPC::Open3','1.13') };
+eval { $v .= pmver('IO::Handle','any version') };
+eval { $v .= pmver('IPC::Open3','any version') };
 eval { $v .= pmver('Module::Build','0.4007') };
 eval { $v .= pmver('Moose','2.1005') };
 eval { $v .= pmver('MooseX::Types::Moose','0.36') };
