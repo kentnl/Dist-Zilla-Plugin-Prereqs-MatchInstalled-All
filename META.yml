@@ -367,7 +367,7 @@ x_Dist_Zilla:
             - blib
           upgrade_perl: ~
       name: Prereqs::MatchInstalled::All
-      version: ~
+      version: 0.1.1
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'
