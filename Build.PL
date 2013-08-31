@@ -17,7 +17,7 @@ my %module_build_args = (
     "Kent Fredric <kentfredric\@gmail.com>"
   ],
   "dist_name" => "Dist-Zilla-Plugin-Prereqs-MatchInstalled-All",
-  "dist_version" => "0.1.0",
+  "dist_version" => "0.1.1",
   "license" => "perl",
   "module_name" => "Dist::Zilla::Plugin::Prereqs::MatchInstalled::All",
   "recommends" => {},
@@ -32,9 +32,9 @@ my %module_build_args = (
   },
   "script_files" => [],
   "test_requires" => {
-    "Capture::Tiny" => "0.22",
-    "Test::More" => "0.98",
-    "blib" => 0
+    "IO::Handle" => "1.34",
+    "IPC::Open3" => "1.13",
+    "Test::More" => "0.98"
   }
 );
 
