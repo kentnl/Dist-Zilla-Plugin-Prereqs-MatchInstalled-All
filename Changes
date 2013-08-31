@@ -1,6 +1,26 @@
 Release history for Dist-Zilla-Plugin-Prereqs-MatchInstalled-All
 
-0.1.1 2013-08-31T02:34:12Z
+0.1.1 2013-08-31T02:35:48Z
+ [!Minor]
+ - Rebuild Tests w/ newer Test::Compile
+
+ [Dependencies::Added / develop requires]
+ - Test::Kwalitee 1.13
+
+ [Dependencies::Added / test requires]
+ - IO::Handle
+ - IPC::Open3
+
+ [Dependencies::Changed / develop requires]
+ - Test::CPAN::Changes 0.22 → 0.23
+ - version 0.9902 → 0.9903
+
+ [Dependencies::Changed / develop suggests]
+ - Dist::Zilla::PluginBundle::Author::KENTNL v1.7.5 → v1.8.3
+
+ [Dependencies::Removed / test requires]
+ - Capture::Tiny 0.22
+ - blib
 
 0.1.0 2013-08-07T23:27:23Z
  - First version.
