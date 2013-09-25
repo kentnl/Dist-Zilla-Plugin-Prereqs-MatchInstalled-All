@@ -6,7 +6,7 @@ BEGIN {
   $Dist::Zilla::Plugin::Prereqs::MatchInstalled::All::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $Dist::Zilla::Plugin::Prereqs::MatchInstalled::All::VERSION = '0.1.2';
+  $Dist::Zilla::Plugin::Prereqs::MatchInstalled::All::VERSION = '0.1.3';
 }
 
 # ABSTRACT: Upgrade ALL your dependencies to the ones you have installed.
@@ -102,7 +102,7 @@ Dist::Zilla::Plugin::Prereqs::MatchInstalled::All - Upgrade ALL your dependencie
 
 =head1 VERSION
 
-version 0.1.2
+version 0.1.3
 
 =head1 SYNOPSIS
 
