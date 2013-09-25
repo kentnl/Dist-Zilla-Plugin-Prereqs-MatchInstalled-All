@@ -395,7 +395,7 @@ x_Dist_Zilla:
             - IPC::Open3
           upgrade_perl: ~
       name: Prereqs::MatchInstalled::All
-      version: 0.1.1
+      version: 0.1.2
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'
