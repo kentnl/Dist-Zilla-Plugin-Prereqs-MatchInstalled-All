@@ -49,7 +49,7 @@ sub pmver {
 }
 
 eval { $v .= pmver('Cwd','any version') };
-eval { $v .= pmver('Dist::Zilla::Plugin::Prereqs::MatchInstalled','v0.1.3') };
+eval { $v .= pmver('Dist::Zilla::Plugin::Prereqs::MatchInstalled','v0.1.4') };
 eval { $v .= pmver('Dist::Zilla::PluginBundle::Author::KENTNL','v1.8.3') };
 eval { $v .= pmver('Dist::Zilla::PluginBundle::Author::KENTNL::Lite','v1.7.2') };
 eval { $v .= pmver('File::Copy::Recursive','0.38') };
