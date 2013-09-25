@@ -48,12 +48,12 @@ sub pmver {
     return sprintf('%-45s => %-10s%-15s%s', $module, $pmver, $wanted, "\n");
 }
 
-eval { $v .= pmver('Cwd','3.44') };
+eval { $v .= pmver('Cwd','any version') };
 eval { $v .= pmver('Dist::Zilla::Plugin::Prereqs::MatchInstalled','v0.1.3') };
 eval { $v .= pmver('Dist::Zilla::PluginBundle::Author::KENTNL','v1.8.3') };
 eval { $v .= pmver('Dist::Zilla::PluginBundle::Author::KENTNL::Lite','v1.7.2') };
 eval { $v .= pmver('File::Copy::Recursive','0.38') };
-eval { $v .= pmver('File::Spec','3.44') };
+eval { $v .= pmver('File::Spec','any version') };
 eval { $v .= pmver('IO::Handle','any version') };
 eval { $v .= pmver('IPC::Open3','any version') };
 eval { $v .= pmver('Module::Build','0.4007') };

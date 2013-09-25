@@ -54,9 +54,9 @@
       },
       "test" : {
          "requires" : {
-            "Cwd" : "3.44",
+            "Cwd" : "0",
             "File::Copy::Recursive" : "0.38",
-            "File::Spec" : "3.44",
+            "File::Spec" : "0",
             "IO::Handle" : "0",
             "IPC::Open3" : "0",
             "Path::FindDev" : "v0.3.1",
@@ -523,7 +523,9 @@
                      "warnings",
                      "blib",
                      "IO::Handle",
-                     "IPC::Open3"
+                     "IPC::Open3",
+                     "File::Spec",
+                     "Cwd"
                   ],
                   "upgrade_perl" : null
                }

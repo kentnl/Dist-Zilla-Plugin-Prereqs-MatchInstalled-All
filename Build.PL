@@ -32,9 +32,9 @@ my %module_build_args = (
   },
   "script_files" => [],
   "test_requires" => {
-    "Cwd" => "3.44",
+    "Cwd" => 0,
     "File::Copy::Recursive" => "0.38",
-    "File::Spec" => "3.44",
+    "File::Spec" => 0,
     "IO::Handle" => 0,
     "IPC::Open3" => 0,
     "Path::FindDev" => "v0.3.1",
