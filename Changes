@@ -6,9 +6,9 @@ Release history for Dist-Zilla-Plugin-Prereqs-MatchInstalled-All
  - Added one basic test
 
  [Dependencies::Added / test requires]
- - Cwd 3.44
+ - Cwd
  - File::Copy::Recursive 0.38
- - File::Spec 3.44
+ - File::Spec
  - Path::FindDev v0.3.1
  - Path::Tiny 0.035
  - Test::DZil 4.300039
