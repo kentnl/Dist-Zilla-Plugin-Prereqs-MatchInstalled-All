@@ -108,7 +108,7 @@ my $static_prereqs = do { my $x = {
                     },
        'runtime' => {
                       'requires' => {
-                                      'Dist::Zilla::Plugin::Prereqs::MatchInstalled' => 'v0.1.6',
+                                      'Dist::Zilla::Plugin::Prereqs::MatchInstalled' => '1.000',
                                       'Moose' => '2.1205',
                                       'MooseX::Types::Moose' => '0.44',
                                       'perl' => '5.006',

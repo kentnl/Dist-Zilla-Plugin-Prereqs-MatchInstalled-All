@@ -2,11 +2,13 @@ use strict;
 use warnings;
 
 package Dist::Zilla::Plugin::Prereqs::MatchInstalled::All;
-$Dist::Zilla::Plugin::Prereqs::MatchInstalled::All::VERSION = '0.001003';
+$Dist::Zilla::Plugin::Prereqs::MatchInstalled::All::VERSION = '1.000000';
 # ABSTRACT: Upgrade ALL your dependencies to the ones you have installed.
 
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
 use Moose;
-use Dist::Zilla::Plugin::Prereqs::MatchInstalled v0.1.1;
+use Dist::Zilla::Plugin::Prereqs::MatchInstalled 1.000;
 use MooseX::Types::Moose qw( ArrayRef HashRef Str Bool );
 
 
@@ -203,7 +205,7 @@ Dist::Zilla::Plugin::Prereqs::MatchInstalled::All - Upgrade ALL your dependencie
 
 =head1 VERSION
 
-version 0.001003
+version 1.000000
 
 =head1 SYNOPSIS
 

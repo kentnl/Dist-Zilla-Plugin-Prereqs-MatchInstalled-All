@@ -21,7 +21,7 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "Dist::Zilla::Plugin::Prereqs::MatchInstalled::All",
   "PREREQ_PM" => {
-    "Dist::Zilla::Plugin::Prereqs::MatchInstalled" => "v0.1.6",
+    "Dist::Zilla::Plugin::Prereqs::MatchInstalled" => "1.000",
     "Moose" => "2.1205",
     "MooseX::Types::Moose" => "0.44",
     "strict" => 0,
@@ -40,7 +40,7 @@ my %WriteMakefileArgs = (
     "Test::More" => "1.001003",
     "version" => "0.9908"
   },
-  "VERSION" => "0.001003",
+  "VERSION" => "1.000000",
   "test" => {
     "TESTS" => "t/*.t t/00-compile/*.t"
   }
@@ -49,7 +49,7 @@ my %WriteMakefileArgs = (
 
 my %FallbackPrereqs = (
   "Cwd" => 0,
-  "Dist::Zilla::Plugin::Prereqs::MatchInstalled" => "v0.1.6",
+  "Dist::Zilla::Plugin::Prereqs::MatchInstalled" => "1.000",
   "ExtUtils::MakeMaker" => "6.96",
   "File::Copy::Recursive" => "0.38",
   "File::Spec::Functions" => "3.47",
