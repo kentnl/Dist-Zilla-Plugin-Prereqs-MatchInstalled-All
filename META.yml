@@ -4,7 +4,7 @@ author:
   - 'Kent Fredric <kentfredric@gmail.com>'
 build_requires:
   Cwd: '0'
-  ExtUtils::MakeMaker: '6.96'
+  ExtUtils::MakeMaker: '6.98'
   File::Copy::Recursive: '0.38'
   File::Spec::Functions: '3.47'
   List::Util: '1.38'
@@ -15,9 +15,9 @@ build_requires:
   Test::More: '1.001003'
   version: '0.9908'
 configure_requires:
-  ExtUtils::MakeMaker: '6.96'
+  ExtUtils::MakeMaker: '6.98'
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 5.015, CPAN::Meta::Converter version 2.140640'
+generated_by: 'Dist::Zilla version 5.015, CPAN::Meta::Converter version 2.141170'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -28,7 +28,7 @@ provides:
     file: lib/Dist/Zilla/Plugin/Prereqs/MatchInstalled/All.pm
     version: '1.000000'
 requires:
-  Dist::Zilla::Plugin::Prereqs::MatchInstalled: '1.000'
+  Dist::Zilla::Plugin::Prereqs::MatchInstalled: '1.000000'
   Moose: '2.1205'
   MooseX::Types::Moose: '0.44'
   perl: '5.006'
@@ -41,7 +41,7 @@ resources:
 version: '1.000000'
 x_BuiltWith:
   modules:
-    CPAN::Meta: '2.140640'
+    CPAN::Meta: '2.141170'
     CPAN::Meta::Requirements: '2.125'
     Cwd: '3.47'
     Dist::Zilla::Plugin::Authority: '1.006'
@@ -72,7 +72,7 @@ x_BuiltWith:
     Dist::Zilla::Plugin::PodSyntaxTests: '5.015'
     Dist::Zilla::Plugin::PodWeaver: '4.005'
     Dist::Zilla::Plugin::Prereqs: '5.015'
-    Dist::Zilla::Plugin::Prereqs::MatchInstalled: 0.1.6
+    Dist::Zilla::Plugin::Prereqs::MatchInstalled: '1.000000'
     Dist::Zilla::Plugin::Prereqs::Recommend::MatchInstalled: '0.001000'
     Dist::Zilla::Plugin::ReadmeAnyFromPod: '0.141120'
     Dist::Zilla::Plugin::ReadmeFromPod: '0.21'
@@ -88,7 +88,7 @@ x_BuiltWith:
     Dist::Zilla::Plugin::UploadToCPAN: '5.015'
     Dist::Zilla::PluginBundle::Author::KENTNL: '2.013003'
     Dist::Zilla::PluginBundle::Author::KENTNL::Lite: 1.7.2
-    ExtUtils::MakeMaker: '6.96'
+    ExtUtils::MakeMaker: '6.98'
     File::Copy::Recursive: '0.38'
     File::Spec::Functions: '3.47'
     List::Util: '1.38'
@@ -588,7 +588,7 @@ x_Dist_Zilla:
             - Cwd
           upgrade_perl: ~
       name: Prereqs::MatchInstalled::All
-      version: '0.001003'
+      version: '1.000000'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'

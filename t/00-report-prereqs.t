@@ -45,10 +45,10 @@ my %exclude = map {; $_ => 1 } qw(
 my $static_prereqs = do { my $x = {
        'configure' => {
                         'recommends' => {
-                                          'ExtUtils::MakeMaker' => '6.96'
+                                          'ExtUtils::MakeMaker' => '6.98'
                                         },
                         'requires' => {
-                                        'ExtUtils::MakeMaker' => '6.96'
+                                        'ExtUtils::MakeMaker' => '6.98'
                                       }
                       },
        'develop' => {
@@ -108,7 +108,7 @@ my $static_prereqs = do { my $x = {
                     },
        'runtime' => {
                       'requires' => {
-                                      'Dist::Zilla::Plugin::Prereqs::MatchInstalled' => '1.000',
+                                      'Dist::Zilla::Plugin::Prereqs::MatchInstalled' => '1.000000',
                                       'Moose' => '2.1205',
                                       'MooseX::Types::Moose' => '0.44',
                                       'perl' => '5.006',
@@ -118,14 +118,14 @@ my $static_prereqs = do { my $x = {
                     },
        'test' => {
                    'recommends' => {
-                                     'CPAN::Meta' => '2.140640',
+                                     'CPAN::Meta' => '2.141170',
                                      'CPAN::Meta::Requirements' => '2.125',
-                                     'ExtUtils::MakeMaker' => '6.96',
+                                     'ExtUtils::MakeMaker' => '6.98',
                                      'Test::More' => '1.001003'
                                    },
                    'requires' => {
                                    'Cwd' => '0',
-                                   'ExtUtils::MakeMaker' => '6.96',
+                                   'ExtUtils::MakeMaker' => '6.98',
                                    'File::Copy::Recursive' => '0.38',
                                    'File::Spec::Functions' => '3.47',
                                    'List::Util' => '1.38',

@@ -14,14 +14,14 @@ my %WriteMakefileArgs = (
   "AUTHOR" => "Kent Fredric <kentfredric\@gmail.com>",
   "BUILD_REQUIRES" => {},
   "CONFIGURE_REQUIRES" => {
-    "ExtUtils::MakeMaker" => "6.96"
+    "ExtUtils::MakeMaker" => "6.98"
   },
   "DISTNAME" => "Dist-Zilla-Plugin-Prereqs-MatchInstalled-All",
   "EXE_FILES" => [],
   "LICENSE" => "perl",
   "NAME" => "Dist::Zilla::Plugin::Prereqs::MatchInstalled::All",
   "PREREQ_PM" => {
-    "Dist::Zilla::Plugin::Prereqs::MatchInstalled" => "1.000",
+    "Dist::Zilla::Plugin::Prereqs::MatchInstalled" => "1.000000",
     "Moose" => "2.1205",
     "MooseX::Types::Moose" => "0.44",
     "strict" => 0,
@@ -29,7 +29,7 @@ my %WriteMakefileArgs = (
   },
   "TEST_REQUIRES" => {
     "Cwd" => 0,
-    "ExtUtils::MakeMaker" => "6.96",
+    "ExtUtils::MakeMaker" => "6.98",
     "File::Copy::Recursive" => "0.38",
     "File::Spec::Functions" => "3.47",
     "List::Util" => "1.38",
@@ -49,8 +49,8 @@ my %WriteMakefileArgs = (
 
 my %FallbackPrereqs = (
   "Cwd" => 0,
-  "Dist::Zilla::Plugin::Prereqs::MatchInstalled" => "1.000",
-  "ExtUtils::MakeMaker" => "6.96",
+  "Dist::Zilla::Plugin::Prereqs::MatchInstalled" => "1.000000",
+  "ExtUtils::MakeMaker" => "6.98",
   "File::Copy::Recursive" => "0.38",
   "File::Spec::Functions" => "3.47",
   "List::Util" => "1.38",
