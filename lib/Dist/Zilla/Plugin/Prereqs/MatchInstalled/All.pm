@@ -2,13 +2,7 @@ use strict;
 use warnings;
 
 package Dist::Zilla::Plugin::Prereqs::MatchInstalled::All;
-BEGIN {
-  $Dist::Zilla::Plugin::Prereqs::MatchInstalled::All::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $Dist::Zilla::Plugin::Prereqs::MatchInstalled::All::VERSION = '0.1.3';
-}
-
+$Dist::Zilla::Plugin::Prereqs::MatchInstalled::All::VERSION = '0.001003';
 # ABSTRACT: Upgrade ALL your dependencies to the ones you have installed.
 
 use Moose;
@@ -18,7 +12,88 @@ use MooseX::Types::Moose qw( ArrayRef HashRef Str Bool );
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 extends 'Dist::Zilla::Plugin::Prereqs::MatchInstalled';
+
+
+
+
+
+
+
+
+
+
+
 
 
 has exclude => (
@@ -29,12 +104,29 @@ has exclude => (
 );
 
 
+
+
+
 has _exclude_hash => (
   is => ro =>,
   isa => HashRef [Str],
   lazy    => 1,
   builder => '_build__exclude_hash',
 );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 has upgrade_perl => (
@@ -61,16 +153,25 @@ around dump_config => sub {
 };
 
 
+
+
+
 sub _build__exclude_hash {
   my ($self) = @_;
   return { map { ( $_, 1 ) } @{ $self->exclude } };
 }
 
 
+
+
+
 sub _user_wants_excluded {
   my ( $self, $module ) = @_;
   return exists $self->_exclude_hash->{$module};
 }
+
+
+
 
 
 sub _user_wants_upgrade_on {
@@ -94,7 +195,7 @@ __END__
 
 =pod
 
-=encoding utf-8
+=encoding UTF-8
 
 =head1 NAME
 
@@ -102,7 +203,7 @@ Dist::Zilla::Plugin::Prereqs::MatchInstalled::All - Upgrade ALL your dependencie
 
 =head1 VERSION
 
-version 0.1.3
+version 0.001003
 
 =head1 SYNOPSIS
 
@@ -215,7 +316,7 @@ Kent Fredric <kentfredric@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric <kentfredric@gmail.com>.
+This software is copyright (c) 2014 by Kent Fredric <kentfredric@gmail.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
