@@ -8,7 +8,7 @@ package Dist::Zilla::Plugin::Prereqs::MatchInstalled::All;
 # AUTHORITY
 
 use Moose;
-use Dist::Zilla::Plugin::Prereqs::MatchInstalled v0.1.1;
+use Dist::Zilla::Plugin::Prereqs::MatchInstalled 1.000000;
 use MooseX::Types::Moose qw( ArrayRef HashRef Str Bool );
 
 =begin MetaPOD::JSON v1.1.0
