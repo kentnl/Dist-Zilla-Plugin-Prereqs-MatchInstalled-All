@@ -4,7 +4,7 @@ Dist::Zilla::Plugin::Prereqs::MatchInstalled::All - Upgrade ALL your dependencie
 
 # VERSION
 
-version 0.1.2
+version 1.000000
 
 # SYNOPSIS
 
@@ -16,7 +16,7 @@ version 0.1.2
 
 # DESCRIPTION
 
-This is a special case of [`Dist::Zilla::Plugin::__Prereqs::MatchInstalled__`](http://search.cpan.org/perldoc?Dist::Zilla::Plugin::Prereqs::MatchInstalled) that automatically upgrades all versions of all dependencies, unless asked not to.
+This is a special case of [`Dist::Zilla::Plugin::**Prereqs::MatchInstalled**`](https://metacpan.org/pod/Dist::Zilla::Plugin::Prereqs::MatchInstalled) that automatically upgrades all versions of all dependencies, unless asked not to.
 
 ## PITFALLS
 
@@ -70,7 +70,7 @@ Note, this has no effect on the modules that may inherently be only available by
 
 Default is false.
 
-See ["PITFALLS"](#PITFALLS) for details.
+See ["PITFALLS"](#pitfalls) for details.
 
 # PRIVATE ATTRIBUTES
 
@@ -84,21 +84,13 @@ See ["PITFALLS"](#PITFALLS) for details.
 
 ## `_user_wants_upgrade_on`
 
-{
-    "namespace":"Dist::Zilla::Plugin::Prereqs::MatchInstalled::All",
-    "inherits":"Dist::Zilla::Plugin::Prereqs::MatchInstalled",
-    "interface":"class"
-}
-
-
-
 # AUTHOR
 
 Kent Fredric <kentfredric@gmail.com>
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric <kentfredric@gmail.com>.
+This software is copyright (c) 2014 by Kent Fredric <kentfredric@gmail.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
