@@ -5,6 +5,8 @@ package Dist::Zilla::Plugin::Prereqs::MatchInstalled::All;
 
 # ABSTRACT: Upgrade ALL your dependencies to the ones you have installed.
 
+# AUTHORITY
+
 use Moose;
 use Dist::Zilla::Plugin::Prereqs::MatchInstalled v0.1.1;
 use MooseX::Types::Moose qw( ArrayRef HashRef Str Bool );
