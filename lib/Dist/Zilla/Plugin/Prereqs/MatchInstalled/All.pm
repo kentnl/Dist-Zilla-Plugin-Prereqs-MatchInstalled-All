@@ -1,24 +1,110 @@
+use 5.008;    # 08 => utf, 06 => pragmas, our, 04 => arrow coderef, __PACKAGE__
 use strict;
 use warnings;
+use utf8;
 
 package Dist::Zilla::Plugin::Prereqs::MatchInstalled::All;
-BEGIN {
-  $Dist::Zilla::Plugin::Prereqs::MatchInstalled::All::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $Dist::Zilla::Plugin::Prereqs::MatchInstalled::All::VERSION = '0.1.2';
-}
-
+$Dist::Zilla::Plugin::Prereqs::MatchInstalled::All::VERSION = '1.000000';
 # ABSTRACT: Upgrade ALL your dependencies to the ones you have installed.
 
-use Moose;
-use Dist::Zilla::Plugin::Prereqs::MatchInstalled v0.1.1;
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
+use Moose qw( has around extends );
+use Dist::Zilla::Plugin::Prereqs::MatchInstalled 1.000000;
 use MooseX::Types::Moose qw( ArrayRef HashRef Str Bool );
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 extends 'Dist::Zilla::Plugin::Prereqs::MatchInstalled';
+
+
+
+
+
+
+
+
+
+
+
 
 
 has exclude => (
@@ -29,12 +115,29 @@ has exclude => (
 );
 
 
+
+
+
 has _exclude_hash => (
   is => ro =>,
   isa => HashRef [Str],
   lazy    => 1,
   builder => '_build__exclude_hash',
 );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 has upgrade_perl => (
@@ -50,7 +153,7 @@ around mvp_multivalue_args => sub {
 };
 
 around dump_config => sub {
-  my ( $orig, $self, @args ) = @_;
+  my ( $orig, $self, ) = @_;
   my $config      = $self->$orig();
   my $this_config = {
     exclude      => $self->exclude,
@@ -61,10 +164,16 @@ around dump_config => sub {
 };
 
 
+
+
+
 sub _build__exclude_hash {
   my ($self) = @_;
   return { map { ( $_, 1 ) } @{ $self->exclude } };
 }
+
+
+
 
 
 sub _user_wants_excluded {
@@ -73,10 +182,16 @@ sub _user_wants_excluded {
 }
 
 
+
+
+
+my $u_upgrade = q[perl is a dependency, but we won't automatically ];
+$u_upgrade .= q[upgrade that without upgrade_perl = 1];
+
 sub _user_wants_upgrade_on {
   my ( $self, $module ) = @_;
-  if ( $module eq 'perl' and not $self->upgrade_perl ) {
-    $self->log_debug(q[perl is a dependency, but we won't automatically upgrade that without upgrade_perl = 1]);
+  if ( 'perl' eq $module and not $self->upgrade_perl ) {
+    $self->log_debug($u_upgrade);
     return;
   }
   if ( $self->_user_wants_excluded($module) ) {
@@ -94,7 +209,7 @@ __END__
 
 =pod
 
-=encoding utf-8
+=encoding UTF-8
 
 =head1 NAME
 
@@ -102,7 +217,7 @@ Dist::Zilla::Plugin::Prereqs::MatchInstalled::All - Upgrade ALL your dependencie
 
 =head1 VERSION
 
-version 0.1.2
+version 1.000000
 
 =head1 SYNOPSIS
 
@@ -114,7 +229,9 @@ version 0.1.2
 
 =head1 DESCRIPTION
 
-This is a special case of L<<< C<< Dist::Zilla::Plugin::B<Prereqs::MatchInstalled> >>|Dist::Zilla::Plugin::Prereqs::MatchInstalled >>> that automatically upgrades all versions of all dependencies, unless asked not to.
+This is a special case of
+L<<< C<< Dist::Zilla::Plugin::B<Prereqs::MatchInstalled> >>|Dist::Zilla::Plugin::Prereqs::MatchInstalled >>> that
+automatically upgrades all versions of all dependencies, unless asked not to.
 
 =head2 PITFALLS
 
@@ -125,7 +242,8 @@ For instance:
 
 =head3 Local Versions
 
-If you have a single dependency on your system you might use, which is locally patched, and locally patched in such a way the local version is more recent than any on C<CPAN>, you should either
+If you have a single dependency on your system you might use, which is locally patched, and locally patched in such a way the
+local version is more recent than any on C<CPAN>, you should either
 
 =over 4
 
@@ -137,11 +255,14 @@ If you have a single dependency on your system you might use, which is locally p
 
 =head3 Non-Dual Life modules
 
-This plugin is not very smart, and can't differentiate between modules that do exist on C<CPAN> independent of Perl, and modules that don't.
+This plugin is not very smart, and can't differentiate between modules that do exist on C<CPAN> independent of Perl, and
+modules that don't.
 
-For instance, if you use C<Autoprereqs>, its very likely your distribution will add a dependency on either C<strict> or C<warnings>
+For instance, if you use C<Autoprereqs>, its very likely your distribution will add a dependency on either C<strict> or
+C<warnings>
 
-This module will ask your user to upgrade those versions to their latest versions, which will likely require them to upgrade their Perl installation to do so.
+This module will ask your user to upgrade those versions to their latest versions, which will likely require them to upgrade
+their Perl installation to do so.
 
 Which basically means for the mean time, either
 
@@ -215,7 +336,7 @@ Kent Fredric <kentfredric@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric <kentfredric@gmail.com>.
+This software is copyright (c) 2014 by Kent Fredric <kentfredric@gmail.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
