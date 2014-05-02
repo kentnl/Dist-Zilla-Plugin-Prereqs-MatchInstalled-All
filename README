@@ -3,7 +3,7 @@ NAME
     dependencies to the ones you have installed.
 
 VERSION
-    version 1.000000
+    version 0.001003
 
 SYNOPSIS
         [Prereqs::MatchInstalled::All]
