@@ -1,3 +1,4 @@
+use 5.008;    # 08 => utf, 06 => pragmas, our, 04 => arrow coderef, __PACKAGE__
 use strict;
 use warnings;
 use utf8;
