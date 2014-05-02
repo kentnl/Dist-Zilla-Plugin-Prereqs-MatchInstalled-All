@@ -7,7 +7,7 @@ $Dist::Zilla::Plugin::Prereqs::MatchInstalled::All::VERSION = '1.000000';
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
-use Moose;
+use Moose qw( has around extends );
 use Dist::Zilla::Plugin::Prereqs::MatchInstalled 1.000000;
 use MooseX::Types::Moose qw( ArrayRef HashRef Str Bool );
 
