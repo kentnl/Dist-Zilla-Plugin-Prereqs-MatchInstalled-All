@@ -125,12 +125,11 @@ my $static_prereqs = do { my $x = {
                                      'Test::More' => '1.001003'
                                    },
                    'requires' => {
-                                   'Cwd' => '0',
                                    'ExtUtils::MakeMaker' => '6.98',
                                    'File::Copy::Recursive' => '0.38',
                                    'File::Spec::Functions' => '3.47',
+                                   'FindBin' => '1.51',
                                    'List::Util' => '1.38',
-                                   'Path::FindDev' => 'v0.5.0',
                                    'Path::Tiny' => '0.052',
                                    'Test::DZil' => '5.015',
                                    'Test::Fatal' => '0.013',

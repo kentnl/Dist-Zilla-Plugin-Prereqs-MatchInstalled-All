@@ -29,12 +29,11 @@ my %WriteMakefileArgs = (
     "warnings" => 0
   },
   "TEST_REQUIRES" => {
-    "Cwd" => 0,
     "ExtUtils::MakeMaker" => "6.98",
     "File::Copy::Recursive" => "0.38",
     "File::Spec::Functions" => "3.47",
+    "FindBin" => "1.51",
     "List::Util" => "1.38",
-    "Path::FindDev" => "v0.5.0",
     "Path::Tiny" => "0.052",
     "Test::DZil" => "5.015",
     "Test::Fatal" => "0.013",
@@ -49,15 +48,14 @@ my %WriteMakefileArgs = (
 
 
 my %FallbackPrereqs = (
-  "Cwd" => 0,
   "Dist::Zilla::Plugin::Prereqs::MatchInstalled" => "1.000000",
   "ExtUtils::MakeMaker" => "6.98",
   "File::Copy::Recursive" => "0.38",
   "File::Spec::Functions" => "3.47",
+  "FindBin" => "1.51",
   "List::Util" => "1.38",
   "Moose" => "2.1205",
   "MooseX::Types::Moose" => "0.44",
-  "Path::FindDev" => "v0.5.0",
   "Path::Tiny" => "0.052",
   "Test::DZil" => "5.015",
   "Test::Fatal" => "0.013",
