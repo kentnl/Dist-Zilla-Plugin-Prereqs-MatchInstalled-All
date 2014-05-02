@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 package Dist::Zilla::Plugin::Prereqs::MatchInstalled::All;
-$Dist::Zilla::Plugin::Prereqs::MatchInstalled::All::VERSION = '0.001003';
+$Dist::Zilla::Plugin::Prereqs::MatchInstalled::All::VERSION = '1.000000';
 # ABSTRACT: Upgrade ALL your dependencies to the ones you have installed.
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
@@ -205,7 +205,7 @@ Dist::Zilla::Plugin::Prereqs::MatchInstalled::All - Upgrade ALL your dependencie
 
 =head1 VERSION
 
-version 0.001003
+version 1.000000
 
 =head1 SYNOPSIS
 
