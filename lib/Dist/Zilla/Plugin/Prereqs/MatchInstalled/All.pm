@@ -1,5 +1,6 @@
 use strict;
 use warnings;
+use utf8;
 
 package Dist::Zilla::Plugin::Prereqs::MatchInstalled::All;
 $Dist::Zilla::Plugin::Prereqs::MatchInstalled::All::VERSION = '1.000000';

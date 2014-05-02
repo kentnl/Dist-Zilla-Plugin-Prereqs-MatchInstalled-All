@@ -111,8 +111,9 @@ my $static_prereqs = do { my $x = {
                                       'Dist::Zilla::Plugin::Prereqs::MatchInstalled' => '1.000000',
                                       'Moose' => '2.1205',
                                       'MooseX::Types::Moose' => '0.44',
-                                      'perl' => '5.006',
+                                      'perl' => '5.008',
                                       'strict' => '0',
+                                      'utf8' => '1.13',
                                       'warnings' => '0'
                                     }
                     },
