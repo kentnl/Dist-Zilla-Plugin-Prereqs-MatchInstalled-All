@@ -225,8 +225,8 @@ version 1.000000
 
 =head1 DESCRIPTION
 
-This is a special case of 
-L<<< C<< Dist::Zilla::Plugin::B<Prereqs::MatchInstalled> >>|Dist::Zilla::Plugin::Prereqs::MatchInstalled >>> that 
+This is a special case of
+L<<< C<< Dist::Zilla::Plugin::B<Prereqs::MatchInstalled> >>|Dist::Zilla::Plugin::Prereqs::MatchInstalled >>> that
 automatically upgrades all versions of all dependencies, unless asked not to.
 
 =head2 PITFALLS
