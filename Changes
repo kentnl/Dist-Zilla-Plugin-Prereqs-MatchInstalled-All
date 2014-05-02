@@ -1,6 +1,6 @@
 Release history for Dist-Zilla-Plugin-Prereqs-MatchInstalled-All
 
-1.000000 2014-05-02T03:17:14Z
+1.000000 2014-05-02T03:27:18Z
  [Dependencies::Stats]
  - Dependencies changed since 0.1.2, see Changes.deps{,.all,.dev} for
    details
