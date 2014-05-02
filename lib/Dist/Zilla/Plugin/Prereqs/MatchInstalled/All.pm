@@ -145,7 +145,7 @@ around mvp_multivalue_args => sub {
 };
 
 around dump_config => sub {
-  my ( $orig, $self, @args ) = @_;
+  my ( $orig, $self, ) = @_;
   my $config      = $self->$orig();
   my $this_config = {
     exclude      => $self->exclude,
