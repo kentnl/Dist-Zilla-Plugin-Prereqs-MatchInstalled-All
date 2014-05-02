@@ -588,7 +588,7 @@ x_Dist_Zilla:
             - Cwd
           upgrade_perl: ~
       name: Prereqs::MatchInstalled::All
-      version: ~
+      version: '1.000000'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'
