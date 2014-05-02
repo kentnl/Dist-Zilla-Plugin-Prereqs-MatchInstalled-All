@@ -36,7 +36,9 @@ use MooseX::Types::Moose qw( ArrayRef HashRef Str Bool );
 
 =head1 DESCRIPTION
 
-This is a special case of L<<< C<< Dist::Zilla::Plugin::B<Prereqs::MatchInstalled> >>|Dist::Zilla::Plugin::Prereqs::MatchInstalled >>> that automatically upgrades all versions of all dependencies, unless asked not to.
+This is a special case of
+L<<< C<< Dist::Zilla::Plugin::B<Prereqs::MatchInstalled> >>|Dist::Zilla::Plugin::Prereqs::MatchInstalled >>> that
+automatically upgrades all versions of all dependencies, unless asked not to.
 
 =head2 PITFALLS
 
@@ -47,7 +49,9 @@ For instance:
 
 =head3 Local Versions
 
-If you have a single dependency on your system you might use, which is locally patched, and locally patched in such a way the local version is more recent than any on C<CPAN>, you should either
+If you have a single dependency on your system you might use, which is locally patched, and locally patched in such a way the
+local version is more recent than any on C<CPAN>, you should either
+
 
 =over 4
 
@@ -59,11 +63,14 @@ If you have a single dependency on your system you might use, which is locally p
 
 =head3 Non-Dual Life modules
 
-This plugin is not very smart, and can't differentiate between modules that do exist on C<CPAN> independent of Perl, and modules that don't.
+This plugin is not very smart, and can't differentiate between modules that do exist on C<CPAN> independent of Perl, and
+modules that don't.
 
-For instance, if you use C<Autoprereqs>, its very likely your distribution will add a dependency on either C<strict> or C<warnings>
+For instance, if you use C<Autoprereqs>, its very likely your distribution will add a dependency on either C<strict> or
+C<warnings>
 
-This module will ask your user to upgrade those versions to their latest versions, which will likely require them to upgrade their Perl installation to do so.
+This module will ask your user to upgrade those versions to their latest versions, which will likely require them to upgrade
+their Perl installation to do so.
 
 Which basically means for the mean time, either
 
