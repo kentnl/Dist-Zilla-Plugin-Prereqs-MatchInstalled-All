@@ -3,18 +3,18 @@ abstract: 'Upgrade ALL your dependencies to the ones you have installed.'
 author:
   - 'Kent Fredric <kentfredric@gmail.com>'
 build_requires:
-  ExtUtils::MakeMaker: '6.98'
-  File::Copy::Recursive: '0.38'
+  ExtUtils::MakeMaker: '0'
+  File::Copy::Recursive: '0'
   File::Spec::Functions: '0'
   FindBin: '0'
-  List::Util: '1.38'
-  Path::Tiny: '0.052'
-  Test::DZil: '5.015'
-  Test::Fatal: '0.013'
-  Test::More: '1.001003'
-  version: '0.9908'
+  List::Util: '0'
+  Path::Tiny: '0'
+  Test::DZil: '0'
+  Test::Fatal: '0'
+  Test::More: '0.89'
+  version: '0'
 configure_requires:
-  ExtUtils::MakeMaker: '6.98'
+  ExtUtils::MakeMaker: '6.30'
 dynamic_config: 0
 generated_by: 'Dist::Zilla version 5.015, CPAN::Meta::Converter version 2.141170'
 license: perl
@@ -28,8 +28,8 @@ provides:
     version: '1.000000'
 requires:
   Dist::Zilla::Plugin::Prereqs::MatchInstalled: '1.000000'
-  Moose: '2.1205'
-  MooseX::Types::Moose: '0.44'
+  Moose: '0'
+  MooseX::Types::Moose: '0'
   perl: '5.008'
   strict: '0'
   utf8: '0'
@@ -546,52 +546,6 @@ x_Dist_Zilla:
           type: requires
       name: Prereqs
       version: '5.015'
-    -
-      class: Dist::Zilla::Plugin::Prereqs::MatchInstalled::All
-      config:
-        Dist::Zilla::Plugin::Prereqs::MatchInstalled:
-          applyto:
-            - build.requires
-            - build.recommends
-            - build.suggests
-            - test.requires
-            - test.recommends
-            - test.suggests
-            - runtime.requires
-            - runtime.recommends
-            - runtime.suggests
-            - configure.requires
-            - configure.recommends
-            - configure.suggests
-            - develop.requires
-            - develop.recommends
-            - develop.suggests
-          applyto_phase:
-            - build
-            - test
-            - runtime
-            - configure
-            - develop
-          applyto_relation:
-            - requires
-            - recommends
-            - suggests
-          modules: []
-        Dist::Zilla::Plugin::Prereqs::MatchInstalled::All:
-          exclude:
-            - strict
-            - warnings
-            - blib
-            - IO::Handle
-            - IPC::Open3
-            - File::Spec
-            - File::Spec::Functions
-            - Cwd
-            - FindBin
-            - utf8
-          upgrade_perl: ~
-      name: Prereqs::MatchInstalled::All
-      version: '1.000000'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'

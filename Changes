@@ -1,6 +1,6 @@
 Release history for Dist-Zilla-Plugin-Prereqs-MatchInstalled-All
 
-1.000000 2014-05-02T03:27:18Z
+1.000000 2014-05-02T08:55:30Z
  [00 Minor]
  - No important code changes
  - Just packaging changes downstream vendors who work by hand may have to
@@ -14,8 +14,12 @@ Release history for Dist-Zilla-Plugin-Prereqs-MatchInstalled-All
  - this is the primary reason for the 1.x on the box.
 
  [Dependencies::Aggregate]
- - 5.018000 : 163
- - 5.019000 : 163
+ - 5.008009 : ? → 204
+ - 5.010001 : ? → 183
+ - 5.018000 : 163 → ?
+ - 5.018002 : ? → 172
+ - 5.019000 : 163 → ?
+ - 5.019009 : ? → 166
 
  [Dependencies::Stats]
  - Dependencies changed since 0.1.2, see Changes.deps{,.all,.dev} for
