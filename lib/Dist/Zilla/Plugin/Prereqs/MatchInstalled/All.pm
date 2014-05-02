@@ -188,7 +188,8 @@ sub _user_wants_excluded {
 sub _user_wants_upgrade_on {
   my ( $self, $module ) = @_;
   if ( 'perl' eq $module and not $self->upgrade_perl ) {
-    $self->log_debug(q[perl is a dependency, but we won't automatically upgrade that without upgrade_perl = 1]);
+    my $message = q[perl is a dependency, but we won't automatically upgrade that without upgrade_perl = 1];
+    $self->log_debug($message);
     return;
   }
   if ( $self->_user_wants_excluded($module) ) {
