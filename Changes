@@ -1,6 +1,22 @@
 Release history for Dist-Zilla-Plugin-Prereqs-MatchInstalled-All
 
 1.000000 2014-05-02T03:27:18Z
+ [00 Minor]
+ - No important code changes
+ - Just packaging changes downstream vendors who work by hand may have to
+   worry about.
+
+ [01 Toolkit Change]
+ - Uses ExtUtils::MakeMaker instead of Module::Build
+
+ [02 Version scheme change]
+ - now uses x.123456 instead of x.y.z
+ - this is the primary reason for the 1.x on the box.
+
+ [Dependencies::Aggregate]
+ - 5.018000 : 163
+ - 5.019000 : 163
+
  [Dependencies::Stats]
  - Dependencies changed since 0.1.2, see Changes.deps{,.all,.dev} for
    details

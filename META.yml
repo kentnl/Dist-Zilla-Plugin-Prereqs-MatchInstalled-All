@@ -32,7 +32,7 @@ requires:
   MooseX::Types::Moose: '0.44'
   perl: '5.008'
   strict: '0'
-  utf8: '1.13'
+  utf8: '0'
   warnings: '0'
 resources:
   bugtracker: https://github.com/kentfredric/Dist-Zilla-Plugin-Prereqs-MatchInstalled-All/issues
@@ -588,6 +588,7 @@ x_Dist_Zilla:
             - File::Spec::Functions
             - Cwd
             - FindBin
+            - utf8
           upgrade_perl: ~
       name: Prereqs::MatchInstalled::All
       version: '1.000000'
