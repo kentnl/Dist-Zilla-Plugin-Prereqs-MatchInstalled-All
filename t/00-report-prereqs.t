@@ -128,7 +128,7 @@ my $static_prereqs = do { my $x = {
                                    'ExtUtils::MakeMaker' => '6.98',
                                    'File::Copy::Recursive' => '0.38',
                                    'File::Spec::Functions' => '3.47',
-                                   'FindBin' => '1.51',
+                                   'FindBin' => '0',
                                    'List::Util' => '1.38',
                                    'Path::Tiny' => '0.052',
                                    'Test::DZil' => '5.015',
