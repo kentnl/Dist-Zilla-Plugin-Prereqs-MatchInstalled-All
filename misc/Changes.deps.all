@@ -5,6 +5,7 @@ This file contains ALL changes in dependencies in both REQUIRED / OPTIONAL depen
  - Dist::Zilla 5
  - Dist::Zilla::Plugin::Author::KENTNL::RecommendFixes 0.001001
  - Dist::Zilla::Plugin::Bootstrap::lib
+ - Dist::Zilla::Plugin::CopyFilesFromBuild
  - Dist::Zilla::Plugin::Git::Contributors 0.006
  - Dist::Zilla::Plugin::Prereqs::AuthorDeps
 
