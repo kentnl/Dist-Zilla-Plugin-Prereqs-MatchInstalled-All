@@ -18,6 +18,7 @@ toolkit_hardness  = soft
 normal_form       = numify
 mantissa          = 6
 copyfiles         = LICENSE
+srcreadme         = mkdn
 
 ; version_major     = 0
 ; version_minor     = 1
