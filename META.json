@@ -121,13 +121,13 @@
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/kentfredric/Dist-Zilla-Plugin-Prereqs-MatchInstalled-All/issues"
+         "web" : "https://github.com/kentnl/Dist-Zilla-Plugin-Prereqs-MatchInstalled-All/issues"
       },
-      "homepage" : "https://github.com/kentfredric/Dist-Zilla-Plugin-Prereqs-MatchInstalled-All",
+      "homepage" : "https://github.com/kentnl/Dist-Zilla-Plugin-Prereqs-MatchInstalled-All",
       "repository" : {
          "type" : "git",
-         "url" : "https://github.com/kentfredric/Dist-Zilla-Plugin-Prereqs-MatchInstalled-All.git",
-         "web" : "https://github.com/kentfredric/Dist-Zilla-Plugin-Prereqs-MatchInstalled-All"
+         "url" : "https://github.com/kentnl/Dist-Zilla-Plugin-Prereqs-MatchInstalled-All.git",
+         "web" : "https://github.com/kentnl/Dist-Zilla-Plugin-Prereqs-MatchInstalled-All"
       }
    },
    "version" : "1.000001",
