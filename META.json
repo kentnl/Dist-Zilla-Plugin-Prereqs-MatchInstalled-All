@@ -1,7 +1,7 @@
 {
    "abstract" : "Upgrade ALL your dependencies to the ones you have installed.",
    "author" : [
-      "Kent Fredric <kentfredric@gmail.com>"
+      "Kent Fredric <kentnl@cpan.org>"
    ],
    "dynamic_config" : 0,
    "generated_by" : "Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.142690",
@@ -881,7 +881,6 @@
    },
    "x_authority" : "cpan:KENTNL",
    "x_contributors" : [
-      "Kent Fredric <kentnl@cpan.org>",
       "Сергей Романов <sromanov-dev@yandex.ru>"
    ]
 }

@@ -81,7 +81,7 @@ PRIVATE METHODS
   "_user_wants_excluded"
   "_user_wants_upgrade_on"
 AUTHOR
-    Kent Fredric <kentfredric@gmail.com>
+    Kent Fredric <kentnl@cpan.org>
 
 COPYRIGHT AND LICENSE
     This software is copyright (c) 2014 by Kent Fredric

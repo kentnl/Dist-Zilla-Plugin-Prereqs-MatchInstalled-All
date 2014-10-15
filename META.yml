@@ -1,7 +1,7 @@
 ---
 abstract: 'Upgrade ALL your dependencies to the ones you have installed.'
 author:
-  - 'Kent Fredric <kentfredric@gmail.com>'
+  - 'Kent Fredric <kentnl@cpan.org>'
 build_requires:
   ExtUtils::MakeMaker: '0'
   File::Copy::Recursive: '0'
@@ -627,5 +627,4 @@ x_Dist_Zilla:
     version: '5.020'
 x_authority: cpan:KENTNL
 x_contributors:
-  - 'Kent Fredric <kentnl@cpan.org>'
   - 'Сергей Романов <sromanov-dev@yandex.ru>'
