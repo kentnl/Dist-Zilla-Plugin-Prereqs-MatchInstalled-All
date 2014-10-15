@@ -4,7 +4,9 @@ use warnings;
 use utf8;
 
 package Dist::Zilla::Plugin::Prereqs::MatchInstalled::All;
-$Dist::Zilla::Plugin::Prereqs::MatchInstalled::All::VERSION = '1.000001';
+
+our $VERSION = '1.001000';
+
 # ABSTRACT: Upgrade ALL your dependencies to the ones you have installed.
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
@@ -217,7 +219,7 @@ Dist::Zilla::Plugin::Prereqs::MatchInstalled::All - Upgrade ALL your dependencie
 
 =head1 VERSION
 
-version 1.000001
+version 1.001000
 
 =head1 SYNOPSIS
 
