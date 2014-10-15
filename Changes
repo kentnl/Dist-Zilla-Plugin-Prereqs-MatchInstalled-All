@@ -5,8 +5,7 @@ Release history for Dist-Zilla-Plugin-Prereqs-MatchInstalled-All
 1.000000 2014-05-02T09:30:17Z
  [00 Minor]
  - No important code changes
- - Just packaging changes downstream vendors who work by hand may have to
-   worry about.
+ - Just packaging changes downstream vendors who work by hand may have to worry about.
 
  [01 Toolkit Change]
  - Uses ExtUtils::MakeMaker instead of Module::Build
@@ -25,8 +24,7 @@ Release history for Dist-Zilla-Plugin-Prereqs-MatchInstalled-All
  - 5.019009 : ? → 165
 
  [Dependencies::Stats]
- - Dependencies changed since 0.1.2, see Changes.deps{,.all,.dev} for
-   details
+ - Dependencies changed since 0.1.2, see misc/*.deps* for details
  - build: -1
  - configure: +1 -1 (recommends: +1)
  - develop: +42 ↓5 -2 (recommends: -1, suggests: +1 -1)
@@ -39,8 +37,7 @@ Release history for Dist-Zilla-Plugin-Prereqs-MatchInstalled-All
  - Added one basic test
 
  [Dependencies::Stats]
- - Dependencies changed since 0.1.1, see Changes.deps{,.all,.dev} for
-   details
+ - Dependencies changed since 0.1.1, see misc/*.deps* for details
  - develop: ↑3 (recommends: ↑1)
  - runtime: ↑2
  - test: +7
@@ -50,8 +47,7 @@ Release history for Dist-Zilla-Plugin-Prereqs-MatchInstalled-All
  - Rebuild Tests w/ newer Test::Compile
 
  [Dependencies::Stats]
- - Dependencies changed since 0.1.0, see Changes.deps{,.all,.dev} for
-   details
+ - Dependencies changed since 0.1.0, see misc/*.deps* for details
  - develop: +1 ↑2 (suggests: ↑1)
  - test: +2 -2
 
