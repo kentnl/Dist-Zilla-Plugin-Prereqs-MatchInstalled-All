@@ -10,7 +10,8 @@ $test->add_file(
   'dist.ini',
   simple_ini(
     [ 'Prereqs' => { 'Moose' => 0 } ],    #
-    ['Prereqs::MatchInstalled::All']      #
+    ['Prereqs::MatchInstalled::All'],
+    ['MetaConfig'],                       #
   )
 );
 $test->build_ok;
