@@ -4,7 +4,7 @@ Dist::Zilla::Plugin::Prereqs::MatchInstalled::All - Upgrade ALL your dependencie
 
 # VERSION
 
-version 1.001000
+version 1.001001
 
 # SYNOPSIS
 
