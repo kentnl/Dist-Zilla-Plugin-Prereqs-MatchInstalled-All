@@ -28,74 +28,6 @@ use MooseX::Types::Moose qw( ArrayRef HashRef Str Bool );
 
 =cut
 
-=head1 SYNOPSIS
-
-    [Prereqs::MatchInstalled::All]
-    ; upgrade_perl = 1  ; if you want to upgrade to your installed perl
-    ; include these too if you don't want to force a perl upgrade indirectly.
-    exclude = strict
-    exclude = warnings
-
-=cut
-
-=head1 DESCRIPTION
-
-This is a special case of
-L<<< C<< Dist::Zilla::Plugin::B<Prereqs::MatchInstalled> >>|Dist::Zilla::Plugin::Prereqs::MatchInstalled >>> that
-automatically upgrades all versions of all dependencies, unless asked not to.
-
-=head2 PITFALLS
-
-Presently, there is one very large gotcha about using this module, in that it will upgrade everything,
-even things that don't make sense to upgrade.
-
-For instance:
-
-=head3 Local Versions
-
-If you have a single dependency on your system you might use, which is locally patched, and locally patched in such a way the
-local version is more recent than any on C<CPAN>, you should either
-
-
-=over 4
-
-=item a. Not use this module
-
-=item b. Put that module in the exclusion list
-
-=back
-
-=head3 Non-Dual Life modules
-
-This plugin is not very smart, and can't differentiate between modules that do exist on C<CPAN> independent of Perl, and
-modules that don't.
-
-For instance, if you use C<Autoprereqs>, its very likely your distribution will add a dependency on either C<strict> or
-C<warnings>
-
-This module will ask your user to upgrade those versions to their latest versions, which will likely require them to upgrade
-their Perl installation to do so.
-
-Which basically means for the mean time, either
-
-=over 4
-
-=item a. You must be o.k. with end users needing more recent Perls
-
-=item b. You should avoid upgrading those dependencies by either
-
-=over 4
-
-=item a. Not using this plugin
-
-=item b. Adding problematic modules to the exclusion list
-
-=back
-
-=back
-
-=cut
-
 extends 'Dist::Zilla::Plugin::Prereqs::MatchInstalled';
 
 =attr C<exclude>
@@ -198,3 +130,71 @@ __PACKAGE__->meta->make_immutable;
 no Moose;
 
 1;
+
+=head1 SYNOPSIS
+
+    [Prereqs::MatchInstalled::All]
+    ; upgrade_perl = 1  ; if you want to upgrade to your installed perl
+    ; include these too if you don't want to force a perl upgrade indirectly.
+    exclude = strict
+    exclude = warnings
+
+=cut
+
+=head1 DESCRIPTION
+
+This is a special case of
+L<<< C<< Dist::Zilla::Plugin::B<Prereqs::MatchInstalled> >>|Dist::Zilla::Plugin::Prereqs::MatchInstalled >>> that
+automatically upgrades all versions of all dependencies, unless asked not to.
+
+=head2 PITFALLS
+
+Presently, there is one very large gotcha about using this module, in that it will upgrade everything,
+even things that don't make sense to upgrade.
+
+For instance:
+
+=head3 Local Versions
+
+If you have a single dependency on your system you might use, which is locally patched, and locally patched in such a way the
+local version is more recent than any on C<CPAN>, you should either
+
+
+=over 4
+
+=item a. Not use this module
+
+=item b. Put that module in the exclusion list
+
+=back
+
+=head3 Non-Dual Life modules
+
+This plugin is not very smart, and can't differentiate between modules that do exist on C<CPAN> independent of Perl, and
+modules that don't.
+
+For instance, if you use C<Autoprereqs>, its very likely your distribution will add a dependency on either C<strict> or
+C<warnings>
+
+This module will ask your user to upgrade those versions to their latest versions, which will likely require them to upgrade
+their Perl installation to do so.
+
+Which basically means for the mean time, either
+
+=over 4
+
+=item a. You must be o.k. with end users needing more recent Perls
+
+=item b. You should avoid upgrading those dependencies by either
+
+=over 4
+
+=item a. Not using this plugin
+
+=item b. Adding problematic modules to the exclusion list
+
+=back
+
+=back
+
+=cut
