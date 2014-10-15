@@ -4,82 +4,17 @@ use warnings;
 use utf8;
 
 package Dist::Zilla::Plugin::Prereqs::MatchInstalled::All;
-$Dist::Zilla::Plugin::Prereqs::MatchInstalled::All::VERSION = '1.000000';
+
+our $VERSION = '1.001000';
+
 # ABSTRACT: Upgrade ALL your dependencies to the ones you have installed.
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 use Moose qw( has around extends );
 use Dist::Zilla::Plugin::Prereqs::MatchInstalled 1.000000;
+use Dist::Zilla::Util::ConfigDumper qw( config_dumper );
 use MooseX::Types::Moose qw( ArrayRef HashRef Str Bool );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -152,16 +87,7 @@ around mvp_multivalue_args => sub {
   return ( 'exclude', $orig->( $self, @args ) );
 };
 
-around dump_config => sub {
-  my ( $orig, $self, ) = @_;
-  my $config      = $self->$orig();
-  my $this_config = {
-    exclude      => $self->exclude,
-    upgrade_perl => $self->upgrade_perl,
-  };
-  $config->{ q{} . __PACKAGE__ } = $this_config;
-  return $config;
-};
+around dump_config => config_dumper( __PACKAGE__, qw( exclude upgrade_perl ) );
 
 
 
@@ -217,7 +143,7 @@ Dist::Zilla::Plugin::Prereqs::MatchInstalled::All - Upgrade ALL your dependencie
 
 =head1 VERSION
 
-version 1.000000
+version 1.001000
 
 =head1 SYNOPSIS
 
@@ -332,7 +258,7 @@ See L</PITFALLS> for details.
 
 =head1 AUTHOR
 
-Kent Fredric <kentfredric@gmail.com>
+Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
