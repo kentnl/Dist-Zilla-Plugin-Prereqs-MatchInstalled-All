@@ -102,13 +102,10 @@
             "Test::More" : "1.001006"
          },
          "requires" : {
+            "Dist::Zilla::Util::Test::KENTNL" : "1.003002",
             "ExtUtils::MakeMaker" : "0",
-            "File::Copy::Recursive" : "0",
             "File::Spec" : "0",
-            "FindBin" : "0",
-            "Path::Tiny" : "0",
             "Test::DZil" : "0",
-            "Test::Fatal" : "0",
             "Test::More" : "0.89"
          }
       }
@@ -186,18 +183,15 @@
          "Dist::Zilla::Plugin::UploadToCPAN" : "5.020",
          "Dist::Zilla::PluginBundle::Author::KENTNL" : "2.021000",
          "Dist::Zilla::Util::ConfigDumper" : "0.003006",
+         "Dist::Zilla::Util::Test::KENTNL" : "1.003003",
          "ExtUtils::MakeMaker" : "6.98",
-         "File::Copy::Recursive" : "0.38",
          "File::Spec" : "3.49",
-         "FindBin" : "1.51",
          "Moose" : "2.1213",
          "MooseX::Types::Moose" : "0.45",
-         "Path::Tiny" : "0.058",
          "Pod::Coverage::TrustPod" : "0.100003",
          "Test::CPAN::Changes" : "0.30",
          "Test::CPAN::Meta" : "0.23",
          "Test::DZil" : "5.020",
-         "Test::Fatal" : "0.013",
          "Test::Kwalitee" : "1.22",
          "Test::More" : "1.001006",
          "Test::Pod" : "1.48",
