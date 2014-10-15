@@ -10,6 +10,7 @@ Release history for Dist-Zilla-Plugin-Prereqs-MatchInstalled-All
  [Metadata]
  - Show 1x Contributor
  - Move to Kentnl org
+ - Set author=kentnl@cpan.org
 
 1.000000 2014-05-02T09:30:17Z
  [00 Minor]
