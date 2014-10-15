@@ -15,6 +15,9 @@ This file contains ALL changes in dependencies in both REQUIRED / OPTIONAL depen
  - Dist::Zilla::App::Command::bakeini 0.001002
  - Dist::Zilla::PluginBundle::Author::KENTNL 2.021000
 
+ [Added / runtime requires]
+ - Dist::Zilla::Util::ConfigDumper
+
  [Added / test requires]
  - File::Spec
 
