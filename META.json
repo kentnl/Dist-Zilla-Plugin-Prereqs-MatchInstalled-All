@@ -86,6 +86,7 @@
       "runtime" : {
          "requires" : {
             "Dist::Zilla::Plugin::Prereqs::MatchInstalled" : "1.000000",
+            "Dist::Zilla::Util::ConfigDumper" : "0",
             "Moose" : "0",
             "MooseX::Types::Moose" : "0",
             "perl" : "5.008",
@@ -184,6 +185,7 @@
          "Dist::Zilla::Plugin::Twitter" : "0.026",
          "Dist::Zilla::Plugin::UploadToCPAN" : "5.020",
          "Dist::Zilla::PluginBundle::Author::KENTNL" : "2.021000",
+         "Dist::Zilla::Util::ConfigDumper" : "0.003006",
          "ExtUtils::MakeMaker" : "6.98",
          "File::Copy::Recursive" : "0.38",
          "File::Spec" : "3.49",

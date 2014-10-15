@@ -21,6 +21,7 @@ my %WriteMakefileArgs = (
   "NAME" => "Dist::Zilla::Plugin::Prereqs::MatchInstalled::All",
   "PREREQ_PM" => {
     "Dist::Zilla::Plugin::Prereqs::MatchInstalled" => "1.000000",
+    "Dist::Zilla::Util::ConfigDumper" => 0,
     "Moose" => 0,
     "MooseX::Types::Moose" => 0,
     "strict" => 0,
@@ -46,6 +47,7 @@ my %WriteMakefileArgs = (
 
 my %FallbackPrereqs = (
   "Dist::Zilla::Plugin::Prereqs::MatchInstalled" => "1.000000",
+  "Dist::Zilla::Util::ConfigDumper" => 0,
   "ExtUtils::MakeMaker" => 0,
   "File::Copy::Recursive" => 0,
   "File::Spec" => 0,
