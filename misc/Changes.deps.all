@@ -19,6 +19,7 @@ This file contains ALL changes in dependencies in both REQUIRED / OPTIONAL depen
  - Dist::Zilla::Util::ConfigDumper
 
  [Added / test requires]
+ - Dist::Zilla::Util::Test::KENTNL 1.003002
  - File::Spec
 
  [Changed / configure requires]
@@ -44,8 +45,12 @@ This file contains ALL changes in dependencies in both REQUIRED / OPTIONAL depen
  - CPAN::Meta::Requirements 2.120900
 
  [Removed / test requires]
+ - File::Copy::Recursive
  - File::Spec::Functions
+ - FindBin
  - List::Util
+ - Path::Tiny
+ - Test::Fatal
  - version
 
 1.000000 2014-05-02T09:30:17Z

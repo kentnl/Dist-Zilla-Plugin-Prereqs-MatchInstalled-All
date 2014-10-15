@@ -2,35 +2,27 @@ use strict;
 use warnings;
 
 use Test::More;
-use Path::Tiny;
-use File::Copy::Recursive qw( rcopy );
-use Test::DZil;
-use Test::Fatal;
-use FindBin;
+use Dist::Zilla::Util::Test::KENTNL 1.003002 qw( dztest );
+use Test::DZil qw( simple_ini );
 
-my $dist = 'fake_dist_01';
-
-my $source  = path($FindBin::Bin)->parent->child('corpus')->child($dist);
-my $tempdir = Path::Tiny->tempdir;
-
-rcopy( "$source", "$tempdir" );
-
-my $distini = $tempdir->child('dist.ini');
-
-BAIL_OUT("test setup failed to copy to tempdir") if not -e $distini or -d $tempdir->child("dist.ini");
-
-is(
-  exception {
-    my $builder = Builder->from_config(
-      {
-        dist_root => "$tempdir"
-      }
-    );
-    $builder->build;
-  },
-  undef,
-  'can build dist ' . $dist
+my $test = dztest();
+$test->add_file(
+  'dist.ini',
+  simple_ini(
+    [ 'Prereqs' => { 'Moose' => 0 } ],    #
+    ['Prereqs::MatchInstalled::All']      #
+  )
 );
+$test->build_ok;
+
+ok( exists $test->distmeta->{prereqs}, '->prereqs' )
+  and ok( exists $test->distmeta->{prereqs}->{runtime},                      '->prereqs/runtime' )
+  and ok( exists $test->distmeta->{prereqs}->{runtime}->{requires},          '->prereqs/runtime/requires' )
+  and ok( exists $test->distmeta->{prereqs}->{runtime}->{requires}->{Moose}, '->prereqs/runtime/requires/Moose' )
+  and cmp_ok( $test->distmeta->{prereqs}->{runtime}->{requires}->{Moose}, 'ne', '0', "Moose != 0" );
+
+note explain $test->distmeta;
+note explain $test->builder->log_messages;
 
 done_testing;
 

@@ -5,14 +5,19 @@ This file contains changes in REQUIRED dependencies for standard CPAN phases (co
  - Dist::Zilla::Util::ConfigDumper
 
  [Added / test requires]
+ - Dist::Zilla::Util::Test::KENTNL 1.003002
  - File::Spec
 
  [Changed / configure requires]
  - ExtUtils::MakeMaker 6.30 → 0
 
  [Removed / test requires]
+ - File::Copy::Recursive
  - File::Spec::Functions
+ - FindBin
  - List::Util
+ - Path::Tiny
+ - Test::Fatal
  - version
 
 1.000000 2014-05-02T09:30:17Z
