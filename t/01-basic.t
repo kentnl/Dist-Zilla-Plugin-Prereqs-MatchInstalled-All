@@ -2,28 +2,30 @@ use strict;
 use warnings;
 
 use Test::More;
-use Dist::Zilla::Util::Test::KENTNL 1.003002 qw( dztest );
-use Test::DZil qw( simple_ini );
+use Test::DZil qw( simple_ini Builder );
 
-my $test = dztest();
-$test->add_file(
-  'dist.ini',
-  simple_ini(
-    [ 'Prereqs' => { 'Moose' => 0 } ],    #
-    ['Prereqs::MatchInstalled::All'],
-    ['MetaConfig'],                       #
-  )
+my $zilla = Builder->from_config(
+  { dist_root => 'invalid' },
+  {
+    add_files => {
+      'source/dist.ini' => simple_ini(
+        [ 'Prereqs' => { 'Moose' => 0 } ],    #
+        ['Prereqs::MatchInstalled::All'],
+        ['MetaConfig'],                       #
+      ),
+    }
+  }
 );
-$test->build_ok;
+$zilla->chrome->logger->set_debug(1);
+$zilla->build;
 
-ok( exists $test->distmeta->{prereqs}, '->prereqs' )
-  and ok( exists $test->distmeta->{prereqs}->{runtime},                      '->prereqs/runtime' )
-  and ok( exists $test->distmeta->{prereqs}->{runtime}->{requires},          '->prereqs/runtime/requires' )
-  and ok( exists $test->distmeta->{prereqs}->{runtime}->{requires}->{Moose}, '->prereqs/runtime/requires/Moose' )
-  and cmp_ok( $test->distmeta->{prereqs}->{runtime}->{requires}->{Moose}, 'ne', '0', "Moose != 0" );
+ok( exists $zilla->distmeta->{prereqs}, '->prereqs' )
+  and ok( exists $zilla->distmeta->{prereqs}->{runtime},                      '->prereqs/runtime' )
+  and ok( exists $zilla->distmeta->{prereqs}->{runtime}->{requires},          '->prereqs/runtime/requires' )
+  and ok( exists $zilla->distmeta->{prereqs}->{runtime}->{requires}->{Moose}, '->prereqs/runtime/requires/Moose' )
+  and cmp_ok( $zilla->distmeta->{prereqs}->{runtime}->{requires}->{Moose}, 'ne', '0', "Moose != 0" );
 
-note explain $test->distmeta;
-note explain $test->builder->log_messages;
+note explain $zilla->distmeta;
+note explain $zilla->log_messages;
 
 done_testing;
-

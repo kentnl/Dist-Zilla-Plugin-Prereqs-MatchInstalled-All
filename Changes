@@ -1,15 +1,16 @@
 Release history for Dist-Zilla-Plugin-Prereqs-MatchInstalled-All
 
-1.001001 2017-03-08T10:22:22Z 5284c39
+1.001001 2017-03-08T10:39:41Z e19fee2
  - Bugfix: Avoid test failures with -Ddefault_inc_excludes_dot
  - Drop use of ConfigDumper Util
+ - Drop use of Test::KENTNL/dztest
 
  [Dependencies::Stats]
  - Dependencies changed since 1.001000, see misc/*.deps* for details
  - configure: +1 (recommends: ↑1, suggests: +1)
  - develop: +11 ↑3 -3 (recommends: +1, suggests: ↑2)
  - runtime: -1 (recommends: +1)
- - test: +1 ↓1 (recommends: ↑1 ↓1)
+ - test: +1 ↓1 -1 (recommends: ↑1 ↓1)
 
 1.001000 2014-10-15T22:42:03Z f59f09b
  [Dependencies::Stats]
