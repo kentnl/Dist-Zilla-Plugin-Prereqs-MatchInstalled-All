@@ -10,6 +10,9 @@ This file contains changes in REQUIRED dependencies for standard CPAN phases (co
  [Changed / test requires]
  - Test::More 0.89 → 0
 
+ [Removed / runtime requires]
+ - Dist::Zilla::Util::ConfigDumper
+
 1.001000 2014-10-15T22:42:03Z
  [Added / runtime requires]
  - Dist::Zilla::Util::ConfigDumper
