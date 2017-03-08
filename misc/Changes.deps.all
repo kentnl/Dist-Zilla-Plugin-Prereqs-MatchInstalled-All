@@ -56,6 +56,9 @@ This file contains ALL changes in dependencies in both REQUIRED / OPTIONAL depen
  [Removed / runtime requires]
  - Dist::Zilla::Util::ConfigDumper
 
+ [Removed / test requires]
+ - Dist::Zilla::Util::Test::KENTNL 1.003002
+
 1.001000 2014-10-15T22:42:03Z
  [Added / develop requires]
  - Dist::Zilla 5
