@@ -89,7 +89,6 @@ do { my $x = {
                                       },
                       'requires' => {
                                       'Dist::Zilla::Plugin::Prereqs::MatchInstalled' => '1.000000',
-                                      'Dist::Zilla::Util::ConfigDumper' => '0',
                                       'Moose' => '0',
                                       'MooseX::Types::Moose' => '0',
                                       'perl' => '5.008',

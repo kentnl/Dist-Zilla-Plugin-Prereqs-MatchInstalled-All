@@ -13,7 +13,6 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 use Moose qw( has around extends );
 use Dist::Zilla::Plugin::Prereqs::MatchInstalled 1.000000;
-use Dist::Zilla::Util::ConfigDumper qw( config_dumper );
 use MooseX::Types::Moose qw( ArrayRef HashRef Str Bool );
 
 
@@ -87,7 +86,19 @@ around mvp_multivalue_args => sub {
   return ( 'exclude', $orig->( $self, @args ) );
 };
 
-around dump_config => config_dumper( __PACKAGE__, qw( exclude upgrade_perl ) );
+around dump_config => sub {
+  my ( $orig, $self, @args ) = @_;
+  my $config = $self->$orig(@args);
+  my $localconf = $config->{ +__PACKAGE__ } = {};
+
+  $localconf->{exclude}      = $self->exclude;
+  $localconf->{upgrade_perl} = $self->upgrade_perl;
+
+  $localconf->{ q[$] . __PACKAGE__ . '::VERSION' } = $VERSION
+    unless __PACKAGE__ eq ref $self;
+
+  return $config;
+};
 
 
 
