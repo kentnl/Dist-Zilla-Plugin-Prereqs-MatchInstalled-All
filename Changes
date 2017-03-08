@@ -1,5 +1,7 @@
 Release history for Dist-Zilla-Plugin-Prereqs-MatchInstalled-All
 
+1.001002 2017-03-08T10:42:36Z cce52f5
+
 1.001001 2017-03-08T10:40:55Z de83365
  - Bugfix: Avoid test failures with -Ddefault_inc_excludes_dot
  - Drop use of ConfigDumper Util

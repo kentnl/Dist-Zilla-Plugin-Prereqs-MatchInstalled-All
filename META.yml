@@ -21,7 +21,7 @@ name: Dist-Zilla-Plugin-Prereqs-MatchInstalled-All
 provides:
   Dist::Zilla::Plugin::Prereqs::MatchInstalled::All:
     file: lib/Dist/Zilla/Plugin/Prereqs/MatchInstalled/All.pm
-    version: '1.001001'
+    version: '1.001002'
 recommends:
   Moose: '2.000'
 requires:
@@ -36,4 +36,4 @@ resources:
   bugtracker: https://github.com/kentnl/Dist-Zilla-Plugin-Prereqs-MatchInstalled-All/issues
   homepage: https://github.com/kentnl/Dist-Zilla-Plugin-Prereqs-MatchInstalled-All
   repository: https://github.com/kentnl/Dist-Zilla-Plugin-Prereqs-MatchInstalled-All.git
-version: '1.001001'
+version: '1.001002'
