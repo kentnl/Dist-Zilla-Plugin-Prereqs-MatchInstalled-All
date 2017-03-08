@@ -5,7 +5,7 @@ use utf8;
 
 package Dist::Zilla::Plugin::Prereqs::MatchInstalled::All;
 
-our $VERSION = '1.001000';
+our $VERSION = '1.001001';
 
 # ABSTRACT: Upgrade ALL your dependencies to the ones you have installed.
 
@@ -13,7 +13,6 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 use Moose qw( has around extends );
 use Dist::Zilla::Plugin::Prereqs::MatchInstalled 1.000000;
-use Dist::Zilla::Util::ConfigDumper qw( config_dumper );
 use MooseX::Types::Moose qw( ArrayRef HashRef Str Bool );
 
 
@@ -87,7 +86,19 @@ around mvp_multivalue_args => sub {
   return ( 'exclude', $orig->( $self, @args ) );
 };
 
-around dump_config => config_dumper( __PACKAGE__, qw( exclude upgrade_perl ) );
+around dump_config => sub {
+  my ( $orig, $self, @args ) = @_;
+  my $config = $self->$orig(@args);
+  my $localconf = $config->{ +__PACKAGE__ } = {};
+
+  $localconf->{exclude}      = $self->exclude;
+  $localconf->{upgrade_perl} = $self->upgrade_perl;
+
+  $localconf->{ q[$] . __PACKAGE__ . '::VERSION' } = $VERSION
+    unless __PACKAGE__ eq ref $self;
+
+  return $config;
+};
 
 
 
@@ -143,7 +154,7 @@ Dist::Zilla::Plugin::Prereqs::MatchInstalled::All - Upgrade ALL your dependencie
 
 =head1 VERSION
 
-version 1.001000
+version 1.001001
 
 =head1 SYNOPSIS
 
@@ -262,7 +273,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2014 by Kent Fredric <kentfredric@gmail.com>.
+This software is copyright (c) 2017 by Kent Fredric <kentfredric@gmail.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
